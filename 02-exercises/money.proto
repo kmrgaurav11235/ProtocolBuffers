@@ -1,0 +1,9 @@
+syntax "proto3"
+
+message Money {
+    string currency_code = 1;
+    int64 integral_amount = 2;
+    int32 decimal_amoount = 3;
+}
+
+// https://github.com/googleapis/googleapis/blob/master/google/type/money.proto

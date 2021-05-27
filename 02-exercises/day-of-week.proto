@@ -1,0 +1,14 @@
+syntax "proto3"
+
+enum DayOfWeek {
+    UNDEFINED = 0;
+    SUNDAY = 1;
+    MONDAY = 2;
+    TUESDAT = 3;
+    WEDNESDAY = 4;
+    THURSDAY = 5;
+    FRIDAY = 6;
+    SATURDAY = 7;
+}
+
+// https://github.com/googleapis/googleapis/blob/master/google/type/dayofweek.proto

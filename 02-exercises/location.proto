@@ -1,0 +1,8 @@
+syntax "proto3"
+
+message Location {
+    double latitude = 1;
+    double longitude = 2;
+}
+
+// https://github.com/googleapis/googleapis/blob/master/google/type/latlng.proto
