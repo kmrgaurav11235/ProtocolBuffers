@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+import "03-basics-part-2/03-dates.proto";
+
+message Person {
+    int32 age = 1;
+    string first_name = 2;
+    string last_name = 3;
+    bytes small_picture = 4; // small jpg file
+    bool is_profile_verified = 5;
+    float height = 6; // height in cm
+
+    repeated string phone_numbers = 7; // list of phone numbers that is optional
+
+    // Defining the enum
+    enum EyeColor {
+        UNKNOWN_EYE_COLOR = 0;
+        EYE_GREEN = 1;
+        EYE_BROWN = 2;
+        EYE_BLUE = 3;
+    }
+
+    // Using the enum
+    EyeColor eye_color = 8;
+
+    Date birthday = 9;
+
+    /* 
+    * We define the type Address within Person -- Nested message.
+    * Full name: Person.Address
+    * Since, we are curretly inside Person, we don't need to use the full name.
+    */
+    message Address {
+        string address_line_1 = 1;
+        string address_line_2 = 2;
+        string zip_code = 3;
+        string city = 4;
+        string country = 5;
+    }
+
+    repeated Address addresses = 10;
+}
