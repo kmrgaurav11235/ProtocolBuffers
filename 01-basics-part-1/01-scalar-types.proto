@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Person {
+    // FORMAT: data_type field_name = tag
+    int32 age = 1;
+    string first_name = 2;
+    string last_name = 3;
+    bytes small_picture = 4; // small jpg file
+    bool is_profile_verified = 5;
+    float height = 6; // height in cm
+}
+/*
+* For protocol buffer, the important element is tag (not field name). 
+* Smallest tag = 1, Largest tag = 2^(29) - 1. You also cannot use the numbers 19,000 through 19,999.
+* Tags numbered from 1 to 15 use 1 byte in space. So, use them for frequently populated fields.
+* Tags numbered from 15 to 2047 use 2 bytes.
+*/
