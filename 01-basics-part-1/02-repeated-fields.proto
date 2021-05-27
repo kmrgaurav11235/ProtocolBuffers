@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+message Person {
+    int32 age = 1;
+    string first_name = 2;
+    string last_name = 3;
+    bytes small_picture = 4; // small jpg file
+    bool is_profile_verified = 5;
+    float height = 6; // height in cm
+
+    repeated string phone_numbers = 7; // list of phone numbers that is optional
+}
+/*
+* To make a 'list' or an 'array', you can use "Repeated Fields". The list can take an number (0 or more)
+    of elements that you want.
+* Every single field, if not specified, will take the default value for that type. There is no concept of
+    required field or optional fields.
+* Default value for fields:
+    bool:                   false
+    number (int32 etc.):    0
+    string:                 empty string
+    bytes:                  empty bytes
+    enum:                   first value
+    repeated:               empty list
+*/
