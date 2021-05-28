@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "04-exercises/04-separate-files-with-imports-n-packages/street.proto";
+
+package in.gaurav.address.building;
+
+message Building {
+    string building_name = 1;
+    int32 building_number = 2;
+    in.gaurav.address.street.Street street = 3;
+}

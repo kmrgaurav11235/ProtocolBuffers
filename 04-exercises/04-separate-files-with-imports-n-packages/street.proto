@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "04-exercises/04-separate-files-with-imports-n-packages/city.proto";
+
+package in.gaurav.address.street;
+
+message Street {
+    string street_name = 1;
+    in.gaurav.address.city.City city = 2;
+}
